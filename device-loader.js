@@ -1,0 +1,1 @@
+!function(){function a(a){var t='<script type="text/javascript" src="'+a+'"></script>';document.writeln(t)}var t=-1!=navigator.platform.indexOf("iPhone")||-1!=navigator.platform.indexOf("iPod")||-1!=navigator.platform.indexOf("iPad"),i=["phonegap.js"];1==t&&i.forEach(a)}();

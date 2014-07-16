@@ -1,0 +1,1 @@
+define(["_","Backbone"],function(e,n){var r=n.Model.extend({defaults:{name:"Harry Potter"}});return r});

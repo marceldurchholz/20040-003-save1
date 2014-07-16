@@ -1,0 +1,1 @@
+define(["underscore","Backbone","text!views/template/MediathekView.html"],function(e,t,l){var n=t.View.extend({template:e.template(l),events:{"click a":global_a_clickHandler,"click button":global_button_clickHandler},render:function(){return this.$el.html(this.template(this.options)),this}});return n});
