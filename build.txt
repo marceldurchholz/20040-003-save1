@@ -3,6 +3,10 @@ css/style.css
 ----------------
 css/style.css
 
+css/style_firefox.css
+----------------
+css/style_firefox.css
+
 scripts/libs/jquery.mobile/jquery.loading.css
 ----------------
 scripts/libs/jquery.mobile/jquery.loading.css

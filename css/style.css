@@ -1,6 +1,6 @@
 div[data-role="page"] {
 	background-color: transparent !important;
-	-webkit-overflow-scrolling: touch !important;
+	
 }
 div[data-role="header"] {
 	position: absolute !important;
@@ -9,6 +9,7 @@ div[data-role="header"] {
 	right: 0 !important;
 }
 div[data-role="content"] {
+	-webkit-overflow-scrolling: touch !important;
 	position: absolute !important;
 	top: 41px !important;
 	bottom: 0 !important;
@@ -16,11 +17,12 @@ div[data-role="content"] {
 	right: 0 !important;
 }
 .scrollable {
-	overflow-y: scroll;
-	-webkit-overflow-scrolling: touch;
+	overflow-y: scroll !important;
+	-webkit-overflow-scrolling: touch !important;
 }
 body {
 	margin: 0 !important;
+	overflow:hidden !important;
 }
 body, body > * {
 	-webkit-user-select: none !important;
@@ -28,15 +30,11 @@ body, body > * {
 	-ms-user-select: none !important;
 	-o-user-select: none !important;
 	user-select: none !important;
-}		
-body, #container, #panel_right, #panel_functions {
+}
+#container, #panel_right, #panel_functions {
 	b/ackground-color: transparent !important;
 	-webkit-overflow-scrolling: touch !important;
 	overflow:hidden !important;
-}
-#container, div.page, .ui-page, .ui-page-active, .ui-content, .ui-content > * {
-	-webkit-transform: translate3d(0,0,0) !important;
-	-webkit-transform: translateZ(0px) !important;
 }
 .ui-overlay-shadow {
 	b/ackground: none;
@@ -50,7 +48,7 @@ body, #container, #panel_right, #panel_functions {
 }
 #container {
 	position: absolute !important;
-	t/op: 0px !important;
+	top: 0px !important;
 	bottom: 0 !important;
 	width: 100% !important;
 	height: 100% !important;
@@ -62,11 +60,8 @@ body, #container, #panel_right, #panel_functions {
 .ui-mobile-viewport-transitioning, .ui-mobile-viewport-transitioning .ui-page {
     overflow: visible !important;
 }
-.ui-page { 
+* {
 	-webkit-backface-visibility: hidden !important;
-	-webkit-transform: rotateY(0deg) !important;
-	-moz-transform: rotateY(0deg) !important;
-	transform: rotateY(0deg) !important;
 }
 .ui-page * {
 }
