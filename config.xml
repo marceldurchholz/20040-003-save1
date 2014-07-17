@@ -44,7 +44,6 @@
 	-->
 	
 	<gap:plugin name="com.phonegap.plugin.statusbar" />
-	<gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay"/>
 
 	<gap:plugin name="org.apache.cordova.core.device" />
 	<gap:plugin name="org.apache.cordova.core.device-orientation" />
