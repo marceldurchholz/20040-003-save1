@@ -59,8 +59,8 @@
 	<gap:plugin name="org.apache.cordova.file" />
     <gap:plugin name="org.apache.cordova.file-transfer" />	
 	<gap:plugin name="cc.fovea.plugins.inapppurchase" />
-	<gap:plugin name="nl.x-services.plugins.insomnia" />
 	-->
+	<gap:plugin name="nl.x-services.plugins.insomnia" />
 	<gap:plugin name="org.apache.cordova.core.inappbrowser" />
 	<gap:plugin name="it.mobimentum.phonegapspinnerplugin"/>
 	
