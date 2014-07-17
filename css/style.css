@@ -16,11 +16,6 @@
 	position:absolute !important;
 	top: 0px !important;
 }
-.container_bodygapclass_desktop {
-	top:80px !important;
-	width:100px !important;
-	overflow:hidden !important;
-}
 #container > * {
 	transform: rotateY(0) !important;
 	-webkit-transform: translate3d(0,0,0) !important;
