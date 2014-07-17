@@ -63,10 +63,10 @@ scripts/libs/underscore/underscore.js
 scripts/libs/backbone/backbone.1.1.2.js
 scripts/collections/sidemenusCollection.js
 scripts/libs/require/text.js
-text!views/panelright/PanelrightView.html
-scripts/views/panelright/PanelrightView.js
-text!views/panelfunctions/PanelfunctionsView.html
-scripts/views/panelfunctions/PanelfunctionsView.js
+text!selfies/navigation/PanelrightView.html
+scripts/selfies/navigation/PanelrightView.js
+text!selfies/navigation/PanelfunctionsView.html
+scripts/selfies/navigation/PanelfunctionsView.js
 text!selfies/navigation/TestViewHref.html
 scripts/selfies/navigation/TestViewHref.js
 scripts/selfies/navigation/TestViewLi.js
