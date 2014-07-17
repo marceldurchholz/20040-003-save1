@@ -50,7 +50,7 @@ body, #container, #panel_right, #panel_functions {
 }
 #container {
 	position: absolute !important;
-	top: 0px !important;
+	t/op: 0px !important;
 	bottom: 0 !important;
 	width: 100% !important;
 	height: 100% !important;
