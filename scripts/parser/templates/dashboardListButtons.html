@@ -1,5 +1,5 @@
 <% if (page_vars.streamData.userArray) _.each(page_vars.streamData.userArray, function(user) { %>
-	<ul id="usersListView" data-filter="false" data-filter-placeholder="Suchfilter..." data-filter-theme="c" data-role="listview" data-theme="c" data-divider-theme="c" data-autodividers="false">
+	<ul id="usersListViewa" data-role="listview" data-theme="c">
 		<li data-pastload-module="simpletext" data-pastload-field="myprofileRowButton" data-userid="<%= page_vars.query_vars.userid %>"></li>
 		<li data-pastload-module="simpletext" data-pastload-field="learningstreamRowButton" data-userid="<%= page_vars.query_vars.userid %>"></li>
 		<li data-pastload-module="simpletext" data-pastload-field="videosRowButton" data-userid="<%= page_vars.query_vars.userid %>"></li>

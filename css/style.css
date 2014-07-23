@@ -65,6 +65,7 @@ div[data-role="content"] {
 /
 ////////////////////////////////////////////////////////////////////////////////////////////
 .loader { 
+	-webkit-transform: translateZ(0);
 	position:fixed;
 	top:20px;
 	left:0px;
@@ -73,9 +74,9 @@ div[data-role="content"] {
 }
  
 .bar {
+	-webkit-transform: translateZ(0);
     background-color:#99aaca; border:1px solid #96a6c9; float:left;
     margin-right:4px; margin-top:6px; width:6px; height:18px;
-    
     
     animation-duration: 1s;
     animation-iteration-count: infinite;
