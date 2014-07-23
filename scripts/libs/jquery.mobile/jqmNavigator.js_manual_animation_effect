@@ -29,7 +29,7 @@
     // $(document).bind("mobileinit", function () {
 	$(document).on( "mobileinit", function( event ) {
 
-		if (window.heavyDebug) debug('jqmNavigator.js >> $(document).bind("mobileinit", function () {...');
+		if (window.heavyDebug) console.log('jqmNavigator.js >> $(document).bind("mobileinit", function () {...');
 
 		$.mobile.pageContainer = $('#container');
 		// Setting jQM pageContainer to #container div, this solves some jQM flickers & jumps
@@ -78,9 +78,9 @@
 					// Appending the view to the DOM
 					// containerViews.pageContainer.append(view.$el);
 					// Rendering the view
-					// if (window.heavyDebug) debug(view);
-					// if (window.heavyDebug) debug('********************************************************************** RENDERING ACTIVE VIEW **********************************************************************');
-					if (window.heavyDebug) debug(view);
+					// if (window.heavyDebug) console.log(view);
+					// if (window.heavyDebug) console.log('********************************************************************** RENDERING ACTIVE VIEW **********************************************************************');
+					if (window.heavyDebug) console.log(view);
 					// view.render();
 
 					if (!$.mobile.firstPage) {
@@ -140,7 +140,7 @@
 				 */
 				popView:function jqmNavigator_popView(options) {
 					var containerViews = this._getPageContainerViews(options);
-					if (window.heavyDebug) debug(containerViews.views.length);
+					if (window.heavyDebug) console.log(containerViews.views.length);
 					if (containerViews.views.length > 1) {
 						var fromView = containerViews.views.pop();
 						toView = containerViews.views[containerViews.views.length - 1];
@@ -173,7 +173,7 @@
 						});
 
 					} else {
-						if (window.heavyDebug) debug('Can\'t pop first view, you can replace it instead!');
+						if (window.heavyDebug) console.log('Can\'t pop first view, you can replace it instead!');
 					}
 				},
 				
@@ -207,7 +207,7 @@
 						}, options));
 
 					} else {
-						// if (window.heavyDebug) debug('Can\'t pop first view, you can replace it instead!');
+						// if (window.heavyDebug) console.log('Can\'t pop first view, you can replace it instead!');
 					}
 				},
 
@@ -231,7 +231,7 @@
 						// Appending the view to the DOM
 						containerViews.pageContainer.append(view.el);
 						// Rendering the view
-						// if (window.heavyDebug) debug('********************************************************************** RENDERING ACTIVE VIEW **********************************************************************');
+						// if (window.heavyDebug) console.log('********************************************************************** RENDERING ACTIVE VIEW **********************************************************************');
 						view.render();
 
 						// Changing page
@@ -267,7 +267,7 @@
 						// Appending the view to the DOM
 						containerViews.pageContainer.append(view.el);
 						// Rendering the view
-						// if (window.heavyDebug) debug('********************************************************************** RENDERING ACTIVE VIEW **********************************************************************');
+						// if (window.heavyDebug) console.log('********************************************************************** RENDERING ACTIVE VIEW **********************************************************************');
 						view.render();
 
 						// Changing page

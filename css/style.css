@@ -13,7 +13,7 @@ body > * {
 	-o-user-select: none;
 	user-select: none;
 }		
-div[data-role="page"], body, #container, #panel_right, #panel_functions {
+div[data-role="page"], body, #container {
 	background-color: transparent !important;
 	-webkit-overflow-scrolling: touch !important;
 	-webkit-transform: translate3d(0,0,0) !important;
