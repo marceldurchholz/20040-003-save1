@@ -68,11 +68,10 @@ label {
 ////////////////////////////////////////////////////////////////////////////////////////////
 /
 ////////////////////////////////////////////////////////////////////////////////////////////
-#pastloadloadingbar, #pastloadloadingbarul, #pastloadloadingbarli {
+#pastloadloadingbar, #pastloadloadingbar > * {
 	-webkit-transform: translateZ(0);
 }
 .loader { 
-	-webkit-transform: translateZ(0);
 	position:relative;
 	top:0px;
 	left:0px;
@@ -81,7 +80,6 @@ label {
 }
  
 .bar {
-	-webkit-transform: translateZ(0);
     background-color:#99aaca; border:1px solid #96a6c9; float:left;
     margin-right:4px; margin-top:6px; width:6px; height:18px;
     
