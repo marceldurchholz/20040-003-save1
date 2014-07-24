@@ -12,10 +12,12 @@ body > * {
 	-ms-user-select: none;
 	-o-user-select: none;
 	user-select: none;
-}		
+}
+div[data-role="page"], body {
+	-webkit-overflow-scrolling: touch !important;
+}
 div[data-role="page"], body, #container {
 	background-color: transparent !important;
-	-webkit-overflow-scrolling: touch !important;
 	-webkit-transform: translate3d(0,0,0) !important;
 	-webkit-transform: translateZ(0px) !important;
 	-webkit-backface-visibility: hidden; 
