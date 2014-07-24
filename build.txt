@@ -102,6 +102,7 @@ scripts/views/template/TemplateView.js
 text!views/noaccess/NoaccessView.html
 scripts/views/noaccess/NoaccessView.js
 scripts/views/users/UsersView.js
+scripts/views/videos/VideosView.js
 text!parser/simpletext/simpletext.html
 scripts/parser/simpletext/simpletextView.js
 scripts/routers/MobileRouter.js
