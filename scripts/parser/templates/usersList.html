@@ -1,5 +1,4 @@
 <ul id="usersListView" data-filter="true" data-filter-placeholder="Suchfilter..." data-filter-theme="a" data-role="listview" data-theme="a" data-divider-theme="h" data-autodividers="true" data-pastload-sort="true">
-	<% console.log(page_vars) %>
 	<% if (page_vars.streamData.usersArray) _.each(page_vars.streamData.usersArray, function(user) { %>
 		<% if (user.active==true || window.me.id == user.sponsor) { %>
 			<li data-dbtype="user" class="<% if(window.me.id == user.sponsor) { %>swipetodeletetd<% } %>" data-devider-topic="<%= user.fullname.substring(0,1).toUpperCase() %>">
