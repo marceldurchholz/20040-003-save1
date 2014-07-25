@@ -18,6 +18,9 @@ body > * {
 div[data-role="page"], body {
 	
 }
+div[data-role="page"] {
+	-webkit-overflow-scrolling: touch !important;
+}
 div[data-role="page"], body, #container {
 	background-color: transparent !important;
 	-webkit-transform: translate3d(0,0,0) !important;

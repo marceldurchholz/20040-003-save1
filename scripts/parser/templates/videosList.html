@@ -1,4 +1,3 @@
-<% console.log(page_vars) %>
 <ul id="videosListView" data-filter="true" data-filter-placeholder="Suchfilter..." data-filter-theme="a" data-role="listview" data-theme="a" data-divider-theme="h" data-autodividers="true" data-pastload-sort="true">
 	<% if (page_vars.streamData.videosArray) _.each(page_vars.streamData.videosArray, function(video) { %>
 		<% if (video.active==true || window.me.id == video.uploader) { %>
