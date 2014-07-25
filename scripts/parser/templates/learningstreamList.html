@@ -11,12 +11,15 @@
 					<a href="notsetted">type not setted
 				<% } %>
 					<img style="width:60px;height:60px;padding:20px;" src="<% if (learningstream.icon && learningstream.icon!="") { %><%= learningstream.icon %><% } else { %>images/avatar.jpg<% } %>">
-					<h2 <% if(learningstream.active!=true) { %>style="color:red;"<% } %>><%= learningstream.title %></h2>
+					<h3 style="<% if(learningstream.active!=true) { %>color:red;<% } %>"><%= learningstream.title %></h3>
 					<p><% if(learningstream.title && learningstream.title!="") { %><%= learningstream.title %><% } else { %>Titel unbekannt<% } %></p>
 					<% if (window.system.owner.master==true) { %>
 						<p><% if (learningstream.uploaderdata && learningstream.uploaderdata.fullname) { %><%= learningstream.uploaderdata.fullname %><% } else { %>Autor unbekannt<% } %></p>
 					<% } %>
+					<p><% if(learningstream.price!="" && learningstream.price!=undefined) { %><%= accounting.formatNumber(parseInt(learningstream.price), 0, ".", ",") %> <%= window.system.currency %><% } else { %>kostenlos<% }%></p>
+					<!--
 					<p class="ui-li-aside"><% if(learningstream.price!="" && learningstream.price!=undefined) { %><%= accounting.formatNumber(parseInt(learningstream.price), 0, ".", ",") %> <%= window.system.currency %><% } else { %>kostenlos<% }%></p>
+					-->
 				</a>
 			</li>
 		<% } %>
