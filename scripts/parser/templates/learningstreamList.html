@@ -10,15 +10,13 @@
 				<% } else { %>
 					<a href="notsetted">type not setted
 				<% } %>
-					<div style="float:left;">
-						<img style="width:60px;height:60px;padding:10px 10px 10px 10px;" src="<% if (learningstream.icon && learningstream.icon!="") { %><%= learningstream.icon %><% } else { %>images/avatar.jpg<% } %>">
-					</div>
-					<div style="float:left;padding-left:10px;">
-						<h3 <% if(learningstream.active!=true) { %>style="color:red;"<% } %>><%= learningstream.title %></h3>
-						<p><% if(learningstream.title && learningstream.title!="") { %><%= learningstream.title %><% } else { %>Kein Titel<% } %><% if(learningstream.price!="" && learningstream.price!=undefined) { %>(<%= learningstream.price %> <%= window.system.currency %>)<% } %></p>
+					<img style="width:60px;height:60px;padding:20px;" src="<% if (learningstream.icon && learningstream.icon!="") { %><%= learningstream.icon %><% } else { %>images/avatar.jpg<% } %>">
+					<h2 <% if(learningstream.active!=true) { %>style="color:red;"<% } %>><%= learningstream.title %></h2>
+					<p><% if(learningstream.title && learningstream.title!="") { %><%= learningstream.title %><% } else { %>Titel unbekannt<% } %></p>
+					<% if (window.system.owner.master==true) { %>
 						<p><% if (learningstream.uploaderdata && learningstream.uploaderdata.fullname) { %><%= learningstream.uploaderdata.fullname %><% } else { %>Autor unbekannt<% } %></p>
-					</div>
-					
+					<% } %>
+					<p class="ui-li-aside"><% if(learningstream.price!="" && learningstream.price!=undefined) { %><%= accounting.formatNumber(parseInt(learningstream.price), 0, ".", ",") %> <%= window.system.currency %><% } else { %>kostenlos<% }%></p>
 				</a>
 			</li>
 		<% } %>

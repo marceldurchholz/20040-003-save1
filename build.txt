@@ -54,6 +54,7 @@ scripts/libs/jquery/jquery-2.1.1.js
 scripts/libs/jquery.mobile/jquery.mobile-1.4.3.js
 scripts/libs/basic/jquerysetup.js
 scripts/libs/basic/jqparseparams.js
+scripts/libs/basic/accounting.js
 scripts/libs/jquery/plugins/jquery.hotkeys.js
 scripts/libs/jquery.mobile/jEditable.js
 scripts/libs/jquery.mobile/jquery.scrollTo.js
