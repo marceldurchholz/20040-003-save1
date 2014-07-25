@@ -108,5 +108,6 @@ scripts/views/cards/CardsView.js
 text!parser/simpletext/simpletext.html
 scripts/parser/simpletext/simpletextView.js
 scripts/views/restore/RestoreView.js
+scripts/views/learningstream/LearningstreamView.js
 scripts/routers/MobileRouter.js
 scripts/app.js
