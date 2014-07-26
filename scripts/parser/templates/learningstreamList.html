@@ -27,8 +27,8 @@
 			</li>
 			<li class="learningstreamFunctionArea" role="learningstreamFunctionArea">
 				<span><a class="ui-link likeLink" data-ajax="true" style="font-weight:normal;" href="#like?id=<%= learningstream.id %>" data-theme="b">Empfehlen</a></span> 
-				&middot; <span><a class="ui-link forwardLink" style="font-weight:normal;" href="#forward?id=<%= learningstream.id %>" data-theme="b">Weiterleiten</a></span> 
-				&middot; <span><a class="ui-link messageLink" style="font-weight:normal;" href="#comment?id=<%= learningstream.id %>" data-theme="b">Fragen?</a></span> 
+				&middot; <span><a class="ui-link forwardLink" data-ajax="true" style="font-weight:normal;" href="#forward?id=<%= learningstream.id %>" data-theme="b">Weiterleiten</a></span> 
+				&middot; <span><a class="ui-link messageLink" data-ajax="true" style="font-weight:normal;" href="#comment?id=<%= learningstream.id %>" data-theme="b">Fragen?</a></span> 
 				<% if(learningstream.likes && learningstream.likes.length>0) { %>&middot; 
 					<span>
 						<a class="ui-link likeCountLink" data-ajax="true" style="font-weight:normal;" href="#likeCount?id=<%= learningstream.id %>" data-theme="b">
