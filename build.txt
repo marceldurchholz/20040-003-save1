@@ -7,6 +7,18 @@ css/style_firefox.css
 ----------------
 css/style_firefox.css
 
+scripts/libs/jquery.mobile/jquery-mobile-theme-030544-0/themes/jquery.mobile-1.4.2_2014-07-26.css
+----------------
+scripts/libs/jquery.mobile/jquery-mobile-theme-030544-0/themes/jquery.mobile-1.4.2_2014-07-26.css
+
+scripts/libs/jquery.mobile/jquery-mobile-theme-030544-0/themes/jquery.mobile-1.4.2_2014-07-26.min.css
+----------------
+scripts/libs/jquery.mobile/jquery-mobile-theme-030544-0/themes/jquery.mobile-1.4.2_2014-07-26.min.css
+
+scripts/libs/jquery.mobile/jquery-mobile-theme-030544-0/themes/jquery.mobile.icons.min.css
+----------------
+scripts/libs/jquery.mobile/jquery-mobile-theme-030544-0/themes/jquery.mobile.icons.min.css
+
 scripts/libs/jquery.mobile/jquery.loading.css
 ----------------
 scripts/libs/jquery.mobile/jquery.loading.css
@@ -56,6 +68,7 @@ scripts/libs/basic/jquerysetup.js
 scripts/libs/basic/jqparseparams.js
 scripts/libs/basic/accounting.js
 scripts/libs/jquery/plugins/jquery.hotkeys.js
+scripts/libs/jquery/plugins/jquery.age.js
 scripts/libs/jquery.mobile/jEditable.js
 scripts/libs/jquery.mobile/jquery.scrollTo.js
 scripts/libs/jquery.mobile/myfunctions.js

@@ -1,4 +1,4 @@
-<ul id="cardsListView" data-filter="true" data-filter-placeholder="Suchfilter..." data-filter-theme="a" data-role="listview" data-theme="a" data-divider-theme="h" data-autodividers="true" data-pastload-sort="true">
+<ul id="cardsListView" data-filter="true" data-filter-placeholder="Suchfilter..." data-filter-theme="a" data-role="listview" data-theme="a" data-divider-theme="j" data-autodividers="true" data-pastload-sort="true">
 	<% if (page_vars.streamData.cardsArray) _.each(page_vars.streamData.cardsArray, function(card) { %>
 		<% if (card.active==true || window.me.id == card.uploader) { %>
 			<li data-dbtype="card" class="<% if(window.me.id == card.uploader) { %>swipetodeletetd<% } %>" data-devider-topic="<%= card.topic %>">

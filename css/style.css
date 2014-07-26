@@ -70,6 +70,56 @@ label {
 .ui-overlay-shadow {
 	b/ackground: none;
 }
+#learningstreamListView > .ui-li-static, #learningstreamListView > .ui-li-divider, #learningstreamListView > li > a.ui-btn {
+	border-left-width: none !important;
+	border-right-width: none !important;
+    border-style: none !important;
+    border-width: 1px 0 0;
+}
+.learningstreamFunctionArea, .learningstreamFunctionArea > a {
+	font-size:0.75em !important;
+	font-weight:normal !important;
+}
+.learningstreamFunctionArea > a.active {
+	font-weight:bold !important;
+}
+.likeLink, .commentlink, .forwardLink, .cdateLink {
+	text-decoration:none !important;
+}
+.likeLink:hover, .likeLinkActive:hover, .commentlink:hover, .forwardLink:hover {
+	text-decoration:underline !important;
+}
+.likeLinkActive {
+	font-weight:bold !important;
+}
+.cdateLink {
+	font-size:0.6em !important;
+	color:#333;
+}
+.learningstreamFunctionArea {
+	padding-bottom:10px !important;
+}
+.learningstreamGapArea {
+	padding-bottom:10px !important;
+	background:none;
+	background-color:transparent !important;
+	border:none !important;
+}
+.listviewTextUnderThumbnbailLeft {
+	color:#999;
+	position: absolute;
+	left:10px;
+	bottom: 10px;
+	m/ax-height: 5em;
+	m/ax-width: 5em;
+	width:70px !important;
+	text-align:center;
+	font-size:0.6em !important;
+}
+#learningstreamListView li[role="heading"], #learningstreamListView li[role="content"] a, #learningstreamListView li[role="learningstreamFunctionArea"] {
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+	b/ackground-color:lightgreen !important;
+}
 ////////////////////////////////////////////////////////////////////////////////////////////
 /
 ////////////////////////////////////////////////////////////////////////////////////////////

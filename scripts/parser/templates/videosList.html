@@ -1,4 +1,4 @@
-<ul id="videosListView" data-filter="true" data-filter-placeholder="Suchfilter..." data-filter-theme="a" data-role="listview" data-theme="a" data-divider-theme="h" data-autodividers="true" data-pastload-sort="true">
+<ul id="videosListView" data-hide-dividers="true" data-filter="true" data-filter-placeholder="Suchfilter..." data-filter-theme="a" data-role="listview" data-theme="a" data-divider-theme="h" data-autodividers="true" data-pastload-sort="true">
 	<% if (page_vars.streamData.videosArray) _.each(page_vars.streamData.videosArray, function(video) { %>
 		<% if (video.active==true || window.me.id == video.uploader) { %>
 			<li data-dbtype="video" class="<% if(window.me.id == video.uploader) { %>swipetodeletetd<% } %>" data-devider-topic="<%= video.topic %>">

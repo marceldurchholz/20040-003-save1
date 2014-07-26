@@ -2,7 +2,7 @@
     <a data-ajax="true" href="#panel_left" data-icon="grid" data-iconpos="notext">Menü</a>
     <h1><%= window.system.owner.companyname %></h1>
     <% if(checkRole("user")==true) { %>
-		<a data-ajax="true" href="#panel_functions" data-icon="gear" data-iconpos="notext">Funktionen</a>
+		<a data-ajax="true" href="#panel_right" data-icon="gear" data-iconpos="notext">Funktionen</a>
 	<% } else { %>
 		<a data-ajax="true" href="#panel_right" data-icon="gear" data-iconpos="notext">Login</a>
 	<% } %>
@@ -11,6 +11,11 @@
 <div data-role="content">
 
 	<div style="p/adding:20px 20px 40px 20px;text-align:center;display:block;">
+	
+		<!--
+		<p><time datetime="<%= dateYmdHisToTimestamp("20100101120000") %>" class="age"><%= dateYmdHisToGerman("20100101120000") %></time></p>
+		<p><time datetime="2020-01-01T12:00:00Z" class="age">January 1, 2020 12:00</time></p>
+		-->
 	
 		<a href="#popupDialog" data-rel="dialog" data-ajax="true" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-a">Delete page...</a>
 		<div data-role="page" id="popupDialog" data-dialog="true" data-theme="g" data-overlay-theme="c">
