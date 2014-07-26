@@ -1,13 +1,13 @@
 <% console.log(page_vars); %>
-<ul id="learningstreamListView" data-inset="true" data-corners="false" data-filter="true" data-filter-placeholder="Suchfilter..." data-shadow="false" data-filter-theme="a" data-role="listview" data-theme="i" data-divider-theme="i" data-autodividers="true" data-pastload-sort="true">
+<ul id="learningstreamListView" data-icon="false" data-inset="true" data-corners="false" data-filter="true" data-filter-placeholder="Suchfilter..." data-shadow="false" data-filter-theme="a" data-role="listview" data-theme="i" data-divider-theme="i" data-autodividers="true" data-pastload-sort="true">
 	<% if (page_vars.streamData.learningstreamArray) _.each(page_vars.streamData.learningstreamArray, function(learningstream) { %>
 		<% if (learningstream.active==true || window.me.id == learningstream.uploader) { %>
 			<li style="padding-top:0px;margin-top:-7px;" role="subheading" data-devider-topic="<%= learningstream.uploaderdata.fullname %>">
 				<!--
-				<span class="ui-link cdateLink" data-ajax="true" style="font-weight:normal;" data-theme="b"><% if (learningstream.cdate && learningstream.cdate!="") { %><%= dateYmdHisToGerman(learningstream.cdate) %><% } else { %><% } %></span>
+				<span class="ui-link linkCdate" data-ajax="true" style="font-weight:normal;" data-theme="b"><% if (learningstream.cdate && learningstream.cdate!="") { %><%= dateYmdHisToGerman(learningstream.cdate) %><% } else { %><% } %></span>
 				-->
-				<span class="ui-link cdateLink" data-ajax="true" style="font-weight:normal;" data-theme="b"><time datetime="<%= dateYmdHisToTimestamp(learningstream.cdate) %>" class="age"><%= dateYmdHisToGerman(learningstream.cdate) %></time></span>
-				<span class="ui-link cdateLink" data-ajax="true" style="font-weight:normal;" data-theme="b"><% if (learningstream.cdate && learningstream.cdate!="") { %> am <%= dateYmdHisToGerman(learningstream.cdate) %><% } else { %><% } %></span>
+				<span class="ui-link linkCdate" data-ajax="true" style="font-weight:normal;" data-theme="b"><time datetime="<%= dateYmdHisToTimestamp(learningstream.cdate) %>" class="age"><%= dateYmdHisToGerman(learningstream.cdate) %></time></span>
+				<span class="ui-link linkCdate" data-ajax="true" style="font-weight:normal;" data-theme="b"><% if (learningstream.cdate && learningstream.cdate!="") { %> am <%= dateYmdHisToGerman(learningstream.cdate) %><% } else { %><% } %></span>
 				<!-- <p style="width:100% !important;float:left;clear:both;padding:0;margin:0;">blablabla</p> -->
 			</li>
 			<li role="content" class="<% if(window.me.id == learningstream.uploader) { %>swipetodeletetd<% } %>">
@@ -26,9 +26,29 @@
 				</a>
 			</li>
 			<li class="learningstreamFunctionArea" role="learningstreamFunctionArea">
-				<span><a class="ui-link likeLink" data-ajax="true" style="font-weight:normal;" href="#like?id=<%= learningstream.id %>" data-theme="b">Interessant</a></span>
-				 &middot; <span><a class="ui-link commentLink" style="font-weight:normal;" href="#comment?id=<%= learningstream.id %>" data-theme="b">Kommentieren</a></span>
-				 &middot; <span><a class="ui-link forwardLink" style="font-weight:normal;" href="#forward?id=<%= learningstream.id %>" data-theme="b">Weiterleiten</a></span>
+				<span><a class="ui-link likeLink" data-ajax="true" style="font-weight:normal;" href="#like?id=<%= learningstream.id %>" data-theme="b">Empfehlen</a></span> 
+				&middot; <span><a class="ui-link forwardLink" style="font-weight:normal;" href="#forward?id=<%= learningstream.id %>" data-theme="b">Weiterleiten</a></span> 
+				&middot; <span><a class="ui-link messageLink" style="font-weight:normal;" href="#comment?id=<%= learningstream.id %>" data-theme="b">Fragen?</a></span> 
+				<% if(learningstream.likes && learningstream.likes.length>0) { %>&middot; 
+					<span>
+						<a class="ui-link likeCountLink" data-ajax="true" style="font-weight:normal;" href="#likeCount?id=<%= learningstream.id %>" data-theme="b">
+							<img src="images/icon-star-gold-10x10.png"><%= learningstream.likes.length %>
+						</a>
+					 </span>
+				<% } %>
+			</li>
+			<li class="learningstreamCommentArea" role="learningstreamCommentArea" data-learningstreamid="<%= learningstream.id %>" style="<% if(learningstream.comments && learningstream.comments.length>0) { %><% } else { %>display:none;<% } %>">
+				<% if(learningstream.likes && learningstream.likes.length>0) { %>
+					<ul id="commentListView" data-icon="false" data-inset="false" data-corners="false" data-shadow="false" data-theme="k">
+						<li>
+							<span>
+								<a class="ui-link likeCountTextLink" data-ajax="true" href="#like?id=<%= learningstream.id %>" data-theme="b">
+									<img src="images/icon-star-gold-10x10.png"><%= learningstream.likes.length %> Nutzer haben dies empfohlen
+								</a>
+							</span> 
+						</li>
+					</ul>
+				<% } %>
 			</li>
 			<li class="learningstreamGapArea">
 			</li>

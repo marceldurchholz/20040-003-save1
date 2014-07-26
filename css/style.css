@@ -76,32 +76,54 @@ label {
     border-style: none !important;
     border-width: 1px 0 0;
 }
-.learningstreamFunctionArea, .learningstreamFunctionArea > a {
+.learningstreamFunctionArea, .learningstreamCommentArea, .learningstreamFunctionArea > a, .learningstreamCommentArea > a {
 	font-size:0.75em !important;
 	font-weight:normal !important;
 }
-.learningstreamFunctionArea > a.active {
+.learningstreamFunctionArea > a.active, .learningstreamCommentArea > a.active {
 	font-weight:bold !important;
 }
-.likeLink, .commentlink, .forwardLink, .cdateLink {
-	text-decoration:none !important;
+.learningstreamFunctionArea, .learningstreamCommentArea {
+	padding-bottom:10px !important;
 }
-.likeLink:hover, .likeLinkActive:hover, .commentlink:hover, .forwardLink:hover {
-	text-decoration:underline !important;
+.likeLink, .messageLink, .forwardLink, .linkCdate {
+	text-decoration:none !important;
+	font-weight:normal !important;
 }
 .likeLinkActive {
 	font-weight:bold !important;
+	text-decoration:none !important;
 }
-.cdateLink {
+.likeLinkActive:hover {
+	font-weight:bold !important;
+	text-decoration:underline !important;
+}
+.likeLink:hover, .messageLink:hover, .forwardLink:hover {
+	text-decoration:underline !important;
+	font-weight:normal !important;
+}
+.linkCdate {
 	font-size:0.6em !important;
-	color:#333;
+	color:#333 !important;
 }
-.learningstreamFunctionArea {
-	padding-bottom:10px !important;
+.likeCountLink, .likeCountTextLink {
+	padding:4px !important;
+	font-weight: normal !important;
+}
+.likeCountTextLink:hover {
+	text-decoration:underline !important;
+}
+.likeCountLink:hover {
+	padding:4px !important;
+	background-color:#eee !important;
+	font-weight: normal !important;
+}
+.likeCountLink > img, .likeCountTextLink > img {
+	padding-right:5px !important;
 }
 .learningstreamGapArea {
 	padding-bottom:10px !important;
-	background:none;
+	background:none !important;
 	background-color:transparent !important;
 	border:none !important;
 }
@@ -116,7 +138,7 @@ label {
 	text-align:center;
 	font-size:0.6em !important;
 }
-#learningstreamListView li[role="heading"], #learningstreamListView li[role="content"] a, #learningstreamListView li[role="learningstreamFunctionArea"] {
+#learningstreamListView li[role="heading"], #learningstreamListView li[role="content"] a, #learningstreamListView li[role="learningstreamFunctionArea"], #learningstreamListView li.learningstreamCommentArea {
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
 	b/ackground-color:lightgreen !important;
 }
