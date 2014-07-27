@@ -26,24 +26,27 @@
 				</a>
 			</li>
 			<li class="learningstreamFunctionArea" role="learningstreamFunctionArea">
-				<span><a class="ui-link likeLink" data-ajax="true" style="font-weight:normal;" href="#like?id=<%= learningstream.id %>" data-theme="b">Empfehlen</a></span> 
+				<% console.log(learningstream.likes) %>
+				<% console.log(window.me.id) %>
+				<% console.log(learningstream.likes.filter(checkMyId)) %>
+				<span><a class="ui-link likeLink<% if(learningstream.likes.filter(checkMyId).length>0) { %>Active<% } %>" data-ajax="true" style="font-weight:normal;" href="#like?id=<%= learningstream.id %>" data-theme="b"><% if(learningstream.likes.filter(checkMyId).length>0) { %>Empfohlen<% } else { %>Empfehlen<% } %></a></span> 
 				&middot; <span><a class="ui-link forwardLink" data-ajax="true" style="font-weight:normal;" href="#forward?id=<%= learningstream.id %>" data-theme="b">Weiterleiten</a></span> 
 				&middot; <span><a class="ui-link messageLink" data-ajax="true" style="font-weight:normal;" href="#comment?id=<%= learningstream.id %>" data-theme="b">Fragen?</a></span> 
 				<% if(learningstream.likes && learningstream.likes.length>0) { %>&middot; 
 					<span>
 						<a class="ui-link likeCountLink" data-ajax="true" style="font-weight:normal;" href="#likeCount?id=<%= learningstream.id %>" data-theme="b">
-							<img src="images/icon-star-gold-10x10.png"><%= learningstream.likes.length %>
+							<img src="images/icon-star-gold-10x10.png"><span class="linkCountLength" data-learningstreamid="<%= learningstream.id %>"><%= learningstream.likes.length %></span>
 						</a>
 					 </span>
 				<% } %>
 			</li>
-			<li class="learningstreamCommentArea" role="learningstreamCommentArea" data-learningstreamid="<%= learningstream.id %>" style="<% if(learningstream.comments && learningstream.comments.length>0) { %><% } else { %>display:none;<% } %>">
+			<li class="learningstreamCommentArea <% if(learningstream.comments && learningstream.comments.length>0) { %><% } else { %>hidden<% } %>" role="learningstreamCommentArea" data-learningstreamid="<%= learningstream.id %>">
 				<% if(learningstream.likes && learningstream.likes.length>0) { %>
 					<ul id="commentListView" data-icon="false" data-inset="false" data-corners="false" data-shadow="false" data-theme="k">
 						<li>
 							<span>
 								<a class="ui-link likeCountTextLink" data-ajax="true" href="#like?id=<%= learningstream.id %>" data-theme="b">
-									<img src="images/icon-star-gold-10x10.png"><%= learningstream.likes.length %> Nutzer haben dies empfohlen
+									<img src="images/icon-star-gold-10x10.png"><span class="linkCountLength" data-learningstreamid="<%= learningstream.id %>"><%= learningstream.likes.length %></span> Nutzer haben dies empfohlen
 								</a>
 							</span> 
 						</li>
