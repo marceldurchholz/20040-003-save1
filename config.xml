@@ -34,6 +34,10 @@
 		<param name="ios-package" value="CDVStatusBar" onload="true" />
 	</feature>
 	
+	<feature name="Keyboard">
+		<param name="ios-package" value="CDVKeyboard" onload="true" />
+	</feature>
+	
     <preference name="phonegap-version" value="3.5.0" />
 	
 	<!--
@@ -44,6 +48,8 @@
 	-->
 	
 	<gap:plugin name="com.phonegap.plugin.statusbar" />
+	
+	<gap:plugin name="dk.vertica.keyboard" />
 
 	<gap:plugin name="org.apache.cordova.core.device" />
 	<gap:plugin name="org.apache.cordova.core.device-orientation" />
@@ -76,7 +82,7 @@
     <preference name="exit-on-suspend"            value="false" />          <!-- ios: if set to true, app will terminate when home button is pressed -->
     <preference name="show-splash-screen-spinner" value="true" />           <!-- ios: if set to false, the spinner won't appear on the splash screen during app loading -->
     <preference name="ShowSplashScreenSpinner" value="true" />
-    <preference name="auto-hide-splash-screen"    value="true" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
+    <preference name="auto-hide-splash-screen"    value="false" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
     <preference name="disable-cursor"             value="false" />          <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
     <preference name="android-minSdkVersion"      value="7" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
@@ -92,7 +98,7 @@
     <preference name="AllowInlineMediaPlayback" value="false" />
     <preference name="BackupWebStorage" value="cloud" />
     <preference name="FadeSplashScreen" value="true" />
-    <preference name="FadeSplashScreenDuration" value="2" />
+    <preference name="FadeSplashScreenDuration" value="5" />
 	<preference name="GapBetweenPages" value="0"/>
 	<preference name="PageLength" value="0"/>
 	<preference name="PaginationBreakingMode" value="page"/>
