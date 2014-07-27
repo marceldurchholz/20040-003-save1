@@ -150,15 +150,6 @@
 	
     <gap:splash src="res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone" />
 
-	<!--
-	iOS URL Whitelist from: https://github.com/phonegap-build/FacebookConnect/tree/962eb0a1c07935ff813e28aa9eaa5581f2e10416
-	m.facebook.com
-	graph.facebook.com
-	api.facebook.com
-	*.fbcdn.net
-	*.akamaihd.net
-	or: *
-	-->
 	<access origin="*" subdomains="true"/>
 
 </widget>
