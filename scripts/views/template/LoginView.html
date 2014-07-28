@@ -12,31 +12,24 @@
 
 	<div style="p/adding:20px 20px 40px 20px;text-align:center;display:block;">
 	
-		<div style="clear:both;float:none;width:100%;">
-			<button class="btn btn-block" onclick="login()">Login with Facebook</button>
+		<div style="clear:both;float:none;width:100%;font-size:9px !important;">
+			<button class="btn btn-block" onclick="sendFbLogin()">Login with Facebook</button>
 			<hr/>
-
 			<button class="btn btn-block" onclick="getInfo()">Get My Info</button>
 			<p>Name: <span id="userName"></span></p>
 			<img id="userPic"/>
 			<hr/>
-
+			<!--
 			<textarea id="Message" placeholder="What's on your mind?" rows="5"></textarea>
 			<button class="btn btn-block" onclick="share()">Share</button>
 			<hr/>
-
-			<p>Complete Facebook Logout. After logging out, you'll have to login again and provide your Facebook credentials.</p>
-			<button class="btn btn-block" onclick="logout()">Logout</button>
-			<hr/>
-
+			-->
 			<p>Revoke App Permissions. After revoking permissions, you'll have to grant permissions again when logging in.</p>
 			<button class="btn btn-block" onclick="revoke()">Revoke Permissions</button>
+			<hr/>			
+			<p>Complete Facebook Logout. After logging out, you'll have to login again and provide your Facebook credentials.</p>
+			<button class="btn btn-block" onclick="logout()">Logout</button>
 		</div>
-		
-	
-		<!--
-		<fb:login-button>Login with Facebook</fb:login-button>
-		-->
 		
 		<!--
 		<p><time datetime="<%= dateYmdHisToTimestamp("20100101120000") %>" class="age"><%= dateYmdHisToGerman("20100101120000") %></time></p>
@@ -158,8 +151,9 @@
 					
 			<div style="float:none;clear:both;"></div>
 			<p style="padding:2px 0px;">
-				<a id="sendLoginBtn" class="sendLoginBtn" data-theme="h" data-role="button"><span>Login</span></a>
-				<a id="sendRegisterBtn" class="sendRegisterBtn" data-mini="true" data-role="button"><span>Neuen Zugang anlegen</span></a>
+				<a id="sendLoginBtn" class="sendLoginBtn" data-mini="true" data-role="button"><span>Login</span></a>
+				<a id="sendRegisterBtn" class="sendRegisterBtn" data-mini="true" data-role="button"><span>Mit diesen Daten registrieren</span></a>
+				<a id="sendFbLoginBtn" class="sendFbLoginBtn" data-mini="true" data-theme="h" data-role="button"><span>Mit Facebook registrieren</span></a>
 			</p>
 			
 			<!-- <a href="/register.html" class="btn btn-link">sign up</a>
