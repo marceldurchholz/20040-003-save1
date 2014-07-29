@@ -36,6 +36,8 @@
 		<p><time datetime="2020-01-01T12:00:00Z" class="age">January 1, 2020 12:00</time></p>
 		-->
 	
+		<!--
+		
 		<a href="#popupDialog" data-rel="dialog" data-ajax="true" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-a">Delete page...</a>
 		<div data-role="page" id="popupDialog" data-dialog="true" data-theme="g" data-overlay-theme="c">
 			<div data-role="header" data-theme="g">
@@ -65,6 +67,7 @@
 		</div>
 		
 		<br><br>
+		-->
 
 		<!--
 		<a href="scripts/popups/user/delete.html" data-ajax="true" data-theme="g" data-role="button" data-rel="dialog" data-transition="pop">dialog</a>
@@ -117,7 +120,7 @@
 		</div>
 		-->
 		
-		<div class="dynspace_small" style="height:1%;"></div>
+		<div style="height:5px;"></div>
 		<!-- <h5>APPinaut</h5> -->
 		
 		<!--
@@ -131,55 +134,60 @@
 		<button type="button" onclick="window.open('http://www.wikipedia.org','_blank','location=yes')">Wikipedia (inAppBrowser)</button><br /><br />
 		<button type="button" onclick="window.open('http://www.wikipedia.org','_system','location=yes')">Wikipedia (mobile browser)</button><br /><br />  
 		</p>
-		<div class="dynspace_small" style="height:1%;"></div>
+		<div style="height:5px;"></div>
 		-->
 		
-		<div class="resizetext" style="font-size:10px;">
-			<div style="font-size:16px;"><strong><%= window.system.owner.slogan %></strong></div>
-			<div style="font-size:12px;"><%= window.system.app.options.calltoaction %></div>
+		<div style="float:none;clear:both;height:20px;"></div>
+		<div style="font-size:10px;">
+			<div style="font-size:16px;"><strong class="resizetext"><%= window.system.owner.slogan %></strong></div>
+			<div style="font-size:12px;" class="resizetext"><%= window.system.app.options.calltoaction %></div>
 		</div>
-		<div style="float:none;clear:both;"></div>
-		<div class="dynspace_small" style="height:1%;"></div>
-		<form style="p/adding-top:10px;text-align:left;">
-			<div style="float:none;clear:both;"></div>
-			<input type="text" style="text-align:center;" value="" id="username" name="username" placeholder="E-Mail-Adresse / Benutzername"/>
-			<div style="float:none;clear:both;"></div>
-			<input type="password" style="text-align:center;" value="" id="password" name="password" placeholder="Passwort"/>
+
+		<div style="float:none;clear:both;height:20px;"></div>
+		
+		<form style="text-align:left;">
+			
+			<div class="ui-grid-a ui-responsive">
+				<div class="ui-block-a">
+					<input data-corners="false" type="text" style="text-align:center;" value="" id="username" name="username" placeholder="E-Mail-Adresse / Benutzername"/>
+				</div>
+				<div class="ui-block-b">
+					<input data-corners="false" type="password" style="text-align:center;" value="" id="password" name="password" placeholder="Passwort"/>
+				</div>
+			</div>
+			
+			<div style="float:none;clear:both;"></div>			
 			<div id="giftcodeDiv" style="display:none;">
 				<input type="text" style="text-align:center;font-family:Trebuchet MS;text-transform: uppercase;letter-spacing:1px;" value="" id="giftcodeInput" name="giftcodeInput" placeholder="Anbietercode eingeben"/>
 			</div>
 					
 			<div style="float:none;clear:both;"></div>
-			<p style="padding:2px 0px;">
-				<a id="sendLoginBtn" class="sendLoginBtn" data-mini="true" data-role="button"><span>Login</span></a>
-				<a id="sendRegisterBtn" class="sendRegisterBtn" data-mini="true" data-role="button"><span>Mit diesen Daten registrieren</span></a>
-				<a id="sendFbLoginBtn" class="sendFbLoginBtn" data-mini="true" data-theme="h" data-role="button"><span>Mit Facebook registrieren</span></a>
-			</p>
+			<a id="sendLoginBtn" class="sendLoginBtn" data-role="button"><span>Anmelden</span></a>
+			
+			<div class="ui-grid-a ui-responsive">
+				<div class="ui-block-a">
+					<a id="sendRegisterBtn" class="sendRegisterBtn" data-theme="d" data-role="button"><span>Neu registrieren</span></a>
+				</div>
+				<div class="ui-block-b">
+					<a id="sendFbLoginBtn" class="sendFbLoginBtn" data-theme="h" data-role="button"><span>Mit Facebook einloggen</span></a>
+				</div>
+			</div>
+			
+			
+			
+			
 			
 			<!-- <a href="/register.html" class="btn btn-link">sign up</a>
 			<input id="sendLoginBtn" class="sendLoginBtn btn btn-primary" value="Los geht's" type="button">
 			-->
 		</form>
 		
-		<p>
-			<a href="#privacy" class="resizetext">Datenschutz</a>
-			<!--
-			<a href="#help" class="no-resizetext">Hilfe</a>
-			-->
-			 <!-- | <a href="#agb">nutzungsbedingungen</a> 
-			 &nbsp;&nbsp;|&nbsp;&nbsp;
-			 -->
-			 &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-			 <a href="#support" class="resizetext">Support</a>
-			 
-			 <p><a id="sendAnonymRegisterBtn" class="sendAnonymRegisterBtn" href="#" style="font-weight:normal;">Anonym in der Mediathek stöbern</a></p>
-			 <!--
-			 <a href="#videos" class="no-resizetext">Anonym in der Mediathek stöbern</a>
-			 &nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" id="giftcode" class="no-resizetext">Anbietercode</a>
-			 -->
-			<!-- | <a href="#legal">Impressum</a>-->
-		</p>
-
+		<div style="height:10px;"></div>
+		
+		<span><a href="#privacy" class="resizetext">Datenschutz</a><span class="resizetext"> &middot; </span><a href="#support" class="resizetext">Support</a></span>
+		<div style="height:5px;"></div>
+		<span><a id="sendAnonymRegisterBtn" class="sendAnonymRegisterBtn resizetext" href="#" style="font-weight:normal;">Anonym in der Mediathek stöbern</a></span>
+		
 		<p style="padding-top:0px;font-weight:normal;font-size:9px;line-height:10px;text-align:justify;opacity:1;color:#888;text-decoration:none;text-align:center;" class="no-resizetext">
 			<% if (1==2) { %>
 				Indem Sie auf "Neuen Zugang anlegen" klicken, akzeptieren Sie die <a onClick="location.href='#agb';" style="font-weight:normal;font-size:9px;line-height:10px;text-align:justify;opacity:1;color:#888;text-decoration:none;" class="no-resizetext">Allgemeinen Geschäftsbedingungen von APPinaut</a>. <a onClick="location.href='#agb';" style="font-weight:normal;font-size:9px;line-height:10px;text-align:justify;opacity:1;color:#888;text-decoration:none;"><!--Kontaktieren</a> Sie uns gerne.--><!-- und bestätigen, dass Sie die Datenschutzrichtlinien und die Bestimmungen zur Cookie-Verwendung gelesen haben. Eventuell erhalten Sie eine E-Mail vom APPinaut Team, die Sie jederzeit abbestellen können.-->
