@@ -112,6 +112,7 @@ text!views/template/UserphotoView.html
 text!views/template/UsercontactView.html
 text!views/template/LearningstreamView.html
 text!views/template/LoginView.html
+text!views/template/PreferencesView.html
 text!views/template/MyprofileView.html
 scripts/views/template/TemplateView.js
 text!views/noaccess/NoaccessView.html
