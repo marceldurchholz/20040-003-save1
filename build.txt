@@ -7,6 +7,10 @@ css/style_firefox.css
 ----------------
 css/style_firefox.css
 
+css/style_touch.css
+----------------
+css/style_touch.css
+
 scripts/libs/jquery.mobile/jquery-mobile-theme-030544-0/themes/jquery.mobile-1.4.2_2014-07-26.css
 ----------------
 scripts/libs/jquery.mobile/jquery-mobile-theme-030544-0/themes/jquery.mobile-1.4.2_2014-07-26.css

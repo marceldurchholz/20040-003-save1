@@ -91,6 +91,14 @@ label {
 	text-decoration:none !important;
 	font-weight:normal !important;
 }
+.linkCdate {
+	font-size:0.6em !important;
+	color:#333 !important;
+}
+.likeLink:hover, .messageLink:hover, .forwardLink:hover {
+	text-decoration:underline !important;
+	font-weight:normal !important;
+}
 .likeLinkActive {
 	font-weight:bold !important;
 	text-decoration:none !important;
@@ -99,25 +107,17 @@ label {
 	font-weight:bold !important;
 	text-decoration:underline !important;
 }
-.likeLink:hover, .messageLink:hover, .forwardLink:hover {
-	text-decoration:underline !important;
-	font-weight:normal !important;
-}
-.linkCdate {
-	font-size:0.6em !important;
-	color:#333 !important;
-}
 .likeCountLink, .likeCountTextLink {
 	padding:4px !important;
 	font-weight: normal !important;
-}
-.likeCountTextLink:hover {
-	text-decoration:underline !important;
 }
 .likeCountLink:hover {
 	padding:4px !important;
 	background-color:#eee !important;
 	font-weight: normal !important;
+}
+.likeCountTextLink:hover {
+	text-decoration:underline !important;
 }
 .likeCountLink > img, .likeCountTextLink > img {
 	padding-right:5px !important;
