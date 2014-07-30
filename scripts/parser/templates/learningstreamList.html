@@ -1,7 +1,7 @@
 <ul id="learningstreamListView" data-icon="false" data-inset="true" data-corners="false" data-filter="true" data-filter-placeholder="Suchfilter..." data-shadow="false" data-filter-theme="a" data-role="listview" data-theme="i" data-divider-theme="i" data-autodividers="true" data-pastload-sort="true">
 	<% if (page_vars.streamData.learningstreamArray) _.each(page_vars.streamData.learningstreamArray, function(learningstream) { %>
 		<% if (learningstream.active==true || window.me.id == learningstream.uploader) { %>
-			<li class="learningstreamSubheading" style="padding-top:0px;padding-bottom:4px;margin-top:0px;" role="subheading" data-devider-topic="<%= learningstream.uploaderdata.fullname %>">
+			<li class="learningstreamSubheading" data-learningstreamid="<%= learningstream.id %>" style="padding-top:0px;padding-bottom:4px;margin-top:0px;" role="subheading" data-devider-topic="<%= learningstream.uploaderdata.fullname %>">
 				<!--
 				<span class="ui-link linkCdate" data-ajax="true" style="font-weight:normal;" data-theme="b"><% if (learningstream.cdate && learningstream.cdate!="") { %><%= dateYmdHisToGerman(learningstream.cdate) %><% } else { %><% } %></span>
 				-->
@@ -45,7 +45,7 @@
 					</li>
 					<li>
 						<form class="commentForm">
-							<input name="comment_input_learningstream_<%= learningstream.id %>"  id="comment_input_learningstream_<%= learningstream.id %>" class="commentInput input_classic" autocomplete="off" data-learningstreamid="<%= learningstream.id %>" placeholder="Stelle eine Frage..." type="text" data-shadow="false" data-corners="false" data-mini="true" data-role="none" value="">
+							<input name="comment_input_learningstream_<%= learningstream.id %>"  id="comment_input_learningstream_<%= learningstream.id %>" class="commentInput input_classic" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" data-learningstreamid="<%= learningstream.id %>" placeholder="Stelle eine Frage..." type="text" data-shadow="false" data-corners="false" data-mini="true" data-role="none" value="">
 						</form>
 					</li>
 				</ul>
