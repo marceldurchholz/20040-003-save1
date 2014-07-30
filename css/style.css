@@ -42,7 +42,7 @@ div[data-role="content"] {
 	right: 0;
 }
 .ui-page-active, body, #container, #panel_right {
-	background: url(../images/quadbg001.jpg) no-repeat center center fixed; 
+	b/ackground: url(../images/quadbg001.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;

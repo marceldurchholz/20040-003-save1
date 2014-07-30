@@ -45,7 +45,7 @@
 					</li>
 					<li>
 						<form class="commentForm">
-							<input class="commentInput input_classic" data-learningstreamid="<%= learningstream.id %>" placeholder="Stelle eine Frage..." type="text" data-shadow="false" data-corners="false" data-mini="true" data-role="none" name="text-4" id="text-4" value="">
+							<input name="comment_input_learningstream_<%= learningstream.id %>"  id="comment_input_learningstream_<%= learningstream.id %>" class="commentInput input_classic" autocomplete="off" data-learningstreamid="<%= learningstream.id %>" placeholder="Stelle eine Frage..." type="text" data-shadow="false" data-corners="false" data-mini="true" data-role="none" value="">
 						</form>
 					</li>
 				</ul>
