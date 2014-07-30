@@ -15,18 +15,27 @@ body > * {
 	-webkit-highlight: none !important; 
 	-webkit-tap-highlight-color: rgba(0,0,0,0) !important;
 }
-div[data-role="page"], body {
-	
-}
 div[data-role="page"] {
 	-webkit-overflow-scrolling: touch !important;
-	padding-top: 43px !important;
+	padding-top: 41px !important;
 }
-div[data-role="page"], body, #container {
+div[data-role="page"], body, #container, #panel_right {
 	background-color: transparent !important;
 	-webkit-transform: translate3d(0,0,0) !important;
 	-webkit-transform: translateZ(0px) !important;
 	-webkit-backface-visibility: hidden; 
+	background: url(../images/quadbg001.jpg) no-repeat center center fixed !important;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#container {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
 }
 div[data-role="header"] {
 	position: absolute;
@@ -40,20 +49,6 @@ div[data-role="content"] {
 	bottom: 0;
 	left: 0;
 	right: 0;
-}
-.ui-page-active, body, #container, #panel_right {
-	b/ackground: url(../images/quadbg001.jpg) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-#container {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100%;
 }
 a {
 	text-decoration: none !important;
