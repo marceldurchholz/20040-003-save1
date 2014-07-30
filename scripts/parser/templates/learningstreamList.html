@@ -1,7 +1,7 @@
 <ul id="learningstreamListView" data-icon="false" data-inset="true" data-corners="false" data-filter="true" data-filter-placeholder="Suchfilter..." data-shadow="false" data-filter-theme="a" data-role="listview" data-theme="i" data-divider-theme="i" data-autodividers="true" data-pastload-sort="true">
 	<% if (page_vars.streamData.learningstreamArray) _.each(page_vars.streamData.learningstreamArray, function(learningstream) { %>
 		<% if (learningstream.active==true || window.me.id == learningstream.uploader) { %>
-			<li style="padding-top:0px;margin-top:-7px;" role="subheading" data-devider-topic="<%= learningstream.uploaderdata.fullname %>">
+			<li class="learningstreamSubheading" style="padding-top:0px;padding-bottom:4px;margin-top:0px;" role="subheading" data-devider-topic="<%= learningstream.uploaderdata.fullname %>">
 				<!--
 				<span class="ui-link linkCdate" data-ajax="true" style="font-weight:normal;" data-theme="b"><% if (learningstream.cdate && learningstream.cdate!="") { %><%= dateYmdHisToGerman(learningstream.cdate) %><% } else { %><% } %></span>
 				-->
