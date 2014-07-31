@@ -1,0 +1,12 @@
+<ul id="messagesListView" data-hide-dividers="true" data-filter="true" data-filter-placeholder="Suchfilter..." data-filter-theme="a" data-role="listview" data-theme="a" data-divider-theme="h" data-pastload-sort="true" data-icon="false">
+	<% if (page_vars.streamData.messagesArray) _.each(page_vars.streamData.messagesArray, function(message) { %>
+		<li data-dbtype="message" class="<% if(window.me.id == message.uploader) { %>swipetodeletetd<% } %>">
+			<a href="#messagedetails?messageid=<%= message.id %>">
+				<img style="width:50px;height:50px;padding:10px 20px !important;" src="<% if (message.readby && _.contains(message.readby, message.receiverdata.id) ) { %><%= message.icon_read %><% } else { %><%= message.icon %><% } %>">
+				<!-- <p class="listviewTextUnderThumbnbailLeft"><% if(message.sender && message.sender!="" && message.sender==window.me.id) { %>IchBinSenderIcon<% } else { %>IchBinReceiverIcon<% }%></p> -->
+				<p><span style="<% if ( message.readby && _.contains(message.readby, message.receiverdata.id) ) { %><% } else { %>font-weight:bold;<% } %>"> <% if ( message.readby && message.receiverdata.id==window.me.id ) { %>&#8617;<% } else { %>&#10150;<% } %> <% if (message.senderdata.fullname && message.senderdata.fullname!="") { %><%= message.senderdata.fullname %><% } else { %><%= message.senderdata.username %><% } %></span></p>
+				<p><%= message.content %></p>
+			</a>
+		</li>
+	<% }); %>
+</ul>
