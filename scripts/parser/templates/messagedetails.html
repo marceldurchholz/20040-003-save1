@@ -3,7 +3,7 @@
 		<li>
 			<!-- <p>aaa</p> -->
 			<a href="#messagephoto?messageid=<%= message.id %>">
-				<img data-pastload-module="simpletext" data-pastload-field="pictureurl" data-pastload-tag="src" src="images/avatar.jpg" style="height:80px !important;width:80px !important;">
+				<img data-pastload-module="simpletext" data-pastload-field="pictureurl" data-pastload-tag="src" src="<% if(message.senderdata.pictureurl && message.senderdata.pictureurl!="") { %><%= message.senderdata.pictureurl %><% } else { %>images/avatar.jpg<% } %>" style="height:80px !important;width:80px !important;">
 				<h2><span data-pastload-module="simpletext" data-pastload-field="fullname"></span></h2>
 				<p><span data-pastload-module="simpletext" data-pastload-field="slogan"></span></p>
 			</a>
