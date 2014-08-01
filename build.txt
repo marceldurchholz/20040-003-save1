@@ -106,7 +106,6 @@ text!views/template/LearningstreamView.html
 text!views/template/LoginView.html
 text!views/template/PreferencesView.html
 text!views/template/MyprofileView.html
-text!views/template/MessagedetailsView.html
 scripts/views/template/TemplateView.js
 text!views/noaccess/NoaccessView.html
 scripts/views/noaccess/NoaccessView.js
@@ -120,6 +119,7 @@ scripts/views/restore/RestoreView.js
 scripts/views/learningstream/LearningstreamView.js
 text!views/template/MessagesView.html
 scripts/views/messages/MessagesView.js
-scripts/views/messagedetails/MessagedetailsView.js
+text!views/template/MessageView.html
+scripts/views/message/MessageView.js
 scripts/routers/MobileRouter.js
 scripts/app.js
