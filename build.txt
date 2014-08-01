@@ -120,5 +120,6 @@ scripts/views/restore/RestoreView.js
 scripts/views/learningstream/LearningstreamView.js
 text!views/template/MessagesView.html
 scripts/views/messages/MessagesView.js
+scripts/views/messagedetails/MessagedetailsView.js
 scripts/routers/MobileRouter.js
 scripts/app.js
