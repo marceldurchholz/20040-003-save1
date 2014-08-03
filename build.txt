@@ -118,7 +118,6 @@ text!parser/simpletext/simpletext.html
 scripts/parser/simpletext/simpletextView.js
 scripts/views/restore/RestoreView.js
 scripts/views/learningstream/LearningstreamView.js
-text!views/template/MessagesView.html
 scripts/views/messages/MessagesView.js
 text!views/template/MessageView.html
 scripts/views/message/MessageView.js
