@@ -64,6 +64,7 @@ scripts/libs/jquery/plugins/jquery.autosize.js
 scripts/libs/jquery/plugins/jquery.age.js
 scripts/libs/jquery.mobile/jEditable.js
 scripts/libs/jquery.mobile/jquery.scrollTo.js
+scripts/libs/openfb/openfb.js
 scripts/libs/jquery.mobile/myfunctions.js
 scripts/libs/basic/documentready.js
 scripts/libs/basic/putcursoratend.js
