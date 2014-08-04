@@ -173,8 +173,8 @@ ul.sendMessage > textarea {
 	
 }
 #myMsgBox {
-	overflow:hidden;
-	resize: none;
+	overflow-y:visible !important;
+	resize: none !important;
 }
 ////////////////////////////////////////////////////////////////////////////////////////////
 /
