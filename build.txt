@@ -50,7 +50,6 @@ scripts/libs/jquery.mobile/jquery.mobile.structure-1.4.3.min.css
 scripts/app.js
 ----------------
 scripts/libs/basic/defvalues.js
-scripts/libs/deployd/dpd.js
 scripts/libs/jquery.mobile/foreach.js
 scripts/libs/basic/javascript.js
 scripts/libs/jquery.mobile/fastclick.js
