@@ -98,7 +98,7 @@ text!views/template/UsersView.html
 text!views/template/VideosView.html
 text!views/template/MediaView.html
 text!views/template/RestoreView.html
-text!views/template/UserdetailsView.html
+text!views/template/UserView.html
 text!views/template/UserinterestsView.html
 text!views/template/UserinformationsView.html
 text!views/template/UserphotoView.html
@@ -106,7 +106,6 @@ text!views/template/UsercontactView.html
 text!views/template/LearningstreamView.html
 text!views/template/LoginView.html
 text!views/template/PreferencesView.html
-text!views/template/MyprofileView.html
 scripts/views/template/TemplateView.js
 text!views/noaccess/NoaccessView.html
 scripts/views/noaccess/NoaccessView.js

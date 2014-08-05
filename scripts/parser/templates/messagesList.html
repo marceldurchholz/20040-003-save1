@@ -4,7 +4,7 @@
 			<a href="#message?messageid=<%= message[0].id %>">
 				<img style="width:50px;height:50px;padding:10px 20px !important;" src="<% if (message[0].readby && _.contains(message[0].readby, message[0].receiverdata.id) ) { %><%= message[0].icon_read %><% } else { %><%= message[0].icon %><% } %>">
 				<!-- <p class="listviewTextUnderThumbnbailLeft"><% if(message.sender && message.sender!="" && message.sender==window.me.id) { %>IchBinSenderIcon<% } else { %>IchBinReceiverIcon<% }%></p> -->
-				<p><span style="<% if ( message[0].readby && _.contains(message[0].readby, message[0].receiverdata.id) ) { %><% } else { %>font-weight:bold;<% } %>"> <% if ( message[0].readby && message[0].userdetails.id==window.me.id ) { %>&#10150;<% } else { %>&#8617;<% } %> <% if (message[0].userdetails.fullname && message[0].userdetails.fullname!="") { %><%= message[0].userdetails.fullname %><% } else { %><%= message[0].userdetails.username %><% } %></span></p>
+				<p><span style="<% if ( message[0].readby && _.contains(message[0].readby, message[0].receiverdata.id) ) { %><% } else { %>font-weight:bold;<% } %>"> <% if ( message[0].readby && message[0].user.id==window.me.id ) { %>&#10150;<% } else { %>&#8617;<% } %> <% if (message[0].user.fullname && message[0].user.fullname!="") { %><%= message[0].user.fullname %><% } else { %><%= message[0].user.username %><% } %></span></p>
 				<p><%= message[0].content %></p>
 			</a>
 		</li>
