@@ -14,9 +14,19 @@
 		<ul data-role="listview" data-inset="true" data-theme="a" data-icon="false" data-corners="false" data-shadow="false">
 			<li>
 				<a href="#userphoto?userid=<%= user.id %>">
-					<img data-pastload-module="simpletext" data-pastload-field="pictureurl" data-pastload-tag="src" src="images/avatar.jpg" style="height:80px !important;width:80px !important;">
-					<h2><span data-pastload-module="simpletext" data-pastload-field="fullname"></span></h2>
-					<p><span data-pastload-module="simpletext" data-pastload-field="slogan"></span></p>
+					<% if (page_vars.streamData.userArray) _.each(page_vars.streamData.userArray, function(user) { %>
+						<% if (user.pictureurl && user.pictureurl!="") { %><%= user.pictureurl %><% } else { %>images/avatar.jpg<% } %>
+					<% }); %>
+					<h2>
+						<% if (page_vars.streamData.userArray) _.each(page_vars.streamData.userArray, function(user) { %>
+							<% if (user.fullname && user.fullname!="") { %><%= user.fullname %><% } else { %><%= user.username %><% } %>
+						<% }); %>
+					</h2>
+					<p>
+						<% if (page_vars.streamData.userArray) _.each(page_vars.streamData.userArray, function(user) { %>
+							<% if (user.slogan && user.slogan!="") { %><%= user.slogan %><% } else { %>Noch kein Slogan...<% } %>
+						<% }); %>
+					</p>
 				</a>
 			</li>
 		</ul>
@@ -64,10 +74,14 @@
 					<p>
 						<% if (page_vars.streamData.userArray) _.each(page_vars.streamData.userArray, function(user) { %>
 							<% if (user.zip && user.zip!="") { %>
-								<span data-pastload-module="simpletext" data-pastload-field="zip"></span> 
+								<% if (page_vars.streamData.userArray) _.each(page_vars.streamData.userArray, function(user) { %>
+									<% if (user.zip && user.zip!="") { %><%= user.zip %><% } else { %><% } %>
+								<% }); %>
 							<% } %>
 							<% if (user.city && user.city!="") { %>
-								 <span data-pastload-module="simpletext" data-pastload-field="city"></span>
+								<% if (page_vars.streamData.userArray) _.each(page_vars.streamData.userArray, function(user) { %>
+									<% if (user.city && user.city!="") { %><%= user.city %><% } else { %><% } %>
+								<% }); %>
 							<% } %>
 						<% }); %>
 					</p>
