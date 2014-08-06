@@ -2,7 +2,7 @@
 	<li data-role="list-divider" data-topic="Informationen">Informationen</li>
 </ul>
 <div data-role="fieldcontain">
-	<fieldset data-role="controlgroup">
+	<fieldset data-role="controlgroup" data-mini="true">
 		<% _.each(_this.options.streamData.userArray, function(user) { %>
 			<% _.each(user.compared_interests, function(interest) { %>
 				<input class="switchUserinterestInput" <% if(interest.sel && interest.sel==true) { %> checked=checked <% } %> type="checkbox" name="checkbox-interest-<%= interest.id %>" id="checkbox-interest-<%= interest.id %>" data-userid="<%= user.id %>">
