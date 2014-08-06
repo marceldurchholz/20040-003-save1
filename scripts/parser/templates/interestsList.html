@@ -4,10 +4,10 @@
 <% _.each(_this.options.streamData.userArray, function(user) { %>
 	<div data-role="fieldcontain">
 		<fieldset data-role="controlgroup" data-inset="false" data-shadow="false" data-corners="false">
-				<% _.each(user.compared_interests, function(interest) { %>
-					<input class="switchUserinterestInput" <% if(interest.sel==true) { %> checked=checked <% } %> type="checkbox" name="checkbox-interest-<%= interest.id %>" id="checkbox-interest-<%= interest.id %>" data-userid="<%= user.id %>">
-					<label for="checkbox-interest-<%= interest.id %>"><%= interest.name %></label>
-				<% }); %>
+			<% _.each(user.compared_interests, function(interest) { %>
+				<input class="switchUserinterestInput" <% if(interest.sel==true) { %> checked=checked <% } %> type="checkbox" name="checkbox-interest-<%= interest.id %>" id="checkbox-interest-<%= interest.id %>" data-userid="<%= user.id %>">
+				<label for="checkbox-interest-<%= interest.id %>"><%= interest.name %></label>
+			<% }); %>
 		</fieldset>
 	</div>
 <% }); %>
