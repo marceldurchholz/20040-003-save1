@@ -10,12 +10,71 @@
 
 <div data-role="content">
 
-	<span data-pastload-module="simpletext" data-pastload-field="profileheading" data-userid="<%= page_vars.query_vars.userid %>"></span>
+	<% if (page_vars.streamData.userArray) _.each(page_vars.streamData.userArray, function(user) { %>
+		<ul data-role="listview" data-inset="true" data-theme="a" data-icon="false" data-corners="false" data-shadow="false">
+			<li>
+				<a href="#userphoto?userid=<%= user.id %>">
+					<img data-pastload-module="simpletext" data-pastload-field="pictureurl" data-pastload-tag="src" src="images/avatar.jpg" style="height:80px !important;width:80px !important;">
+					<h2><span data-pastload-module="simpletext" data-pastload-field="fullname"></span></h2>
+					<p><span data-pastload-module="simpletext" data-pastload-field="slogan"></span></p>
+				</a>
+			</li>
+		</ul>
+	<% }); %>
 	
-	<span data-pastload-module="simpletext" data-pastload-field="perstextblock" data-userid="<%= page_vars.query_vars.userid %>"></span>
+	<% if (page_vars.streamData.userArray) _.each(page_vars.streamData.userArray, function(user) { %>
+		<ul data-role="listview" data-inset="true" data-theme="a" data-corners="false" data-shadow="false">
+			<li>
+				<a href="#userinformations?userid=<%= user.id %>">
+					<p>
+						<% if (page_vars.streamData.userArray) _.each(page_vars.streamData.userArray, function(user) { %>
+							<% if (user.perstext && user.perstext!="") { %><%= user.perstext %><% } else { %>Noch kein Profiltext...<% } %>
+						<% }); %>
+					</p>
+				</a>
+			</li>
+		</ul>
+	<% }); %>
 	
-	<span data-pastload-module="simpletext" data-pastload-field="interestsblock" data-userid="<%= page_vars.query_vars.userid %>"></span>		
+	<% if (page_vars.streamData.userArray) _.each(page_vars.streamData.userArray, function(user) { %>
+		<ul data-role="listview" data-inset="true" data-theme="a" data-corners="false" data-shadow="false" data-divider-theme="h">
+			<li data-role="list-divider" data-topic="Informationen">Informationen<!--<span class="ui-li-count">2</span>--></li>
+			<li><a href="#userinterests?userid=<%= user.id %>" data-topic="Informationen"><p>Interessen</p><span class="ui-li-count"><%= user.interests.length %></span></a></li>
+			<!-- <li><a class="showUserPurchasesLink" href="#"><p>Einkäufe / Abonnements</p></a></li> -->
+		</ul>
+	<% }); %>
 		
-	<span data-pastload-module="simpletext" data-pastload-field="adressblock" data-userid="<%= page_vars.query_vars.userid %>"></span>		
+	<% if (page_vars.streamData.userArray) _.each(page_vars.streamData.userArray, function(user) { %>
+		<ul data-role="listview" data-inset="true" data-inset="true" data-theme="a" data-corners="false" data-shadow="false" data-divider-theme="h">
+			<li data-role="list-divider">Kontaktdaten<!--<span class="ui-li-count">2</span>--></li>
+			<li>
+				<a href="#usercontact?userid=<%= user.id %>">
+					<% if ( ((user.companyname || "") + (user.fullname || "") + (user.street || "") + (user.zip || "") + (user.city || "")) =="" ) { %><p>Noch keine Kontaktdaten...</p><% } %>
+					<p>
+						<% if (page_vars.streamData.userArray) _.each(page_vars.streamData.userArray, function(user) { %>
+							<% if (user.companyname && user.companyname!="") { %>
+								<%= user.companyname %>
+							<% } else { %>
+								<% if(user.fullname && user.fullname!="") { %>
+									<%= user.fullname %>
+								<% } %>
+							<% } %>
+						<% }); %>
+					</p>
+					<p>
+						<% if (page_vars.streamData.userArray) _.each(page_vars.streamData.userArray, function(user) { %>
+							<% if (user.zip && user.zip!="") { %>
+								<span data-pastload-module="simpletext" data-pastload-field="zip"></span> 
+							<% } %>
+							<% if (user.city && user.city!="") { %>
+								 <span data-pastload-module="simpletext" data-pastload-field="city"></span>
+							<% } %>
+						<% }); %>
+					</p>
+					<% if (user.street && user.street!="") { %><p><%= user.street %></p><% } else { %><% } %>
+				</a>
+			</li>
+		</ul>
+	<% }); %>
 	
 </div>
