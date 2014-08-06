@@ -1,8 +1,5 @@
-<% console.log("page_vars") %>
-<% console.log(page_vars) %>
-
 <% if(page_vars.pastLoadField=="") { %>
-	<strong>PASTLOADFIELD NOT SETTED</strong>
+	<strong>PASTLOADFIELD STRING IS EMPTY</strong>
 <% } else { %>
-	<strong>PASTLOADFIELD NOT DEFINED</strong>
+	<strong>PASTLOADFIELD COULD NOT BE LOADED - <%= page_vars.pastLoadField %> PROBABLY NOT DEFINED</strong>
 <% } %>
